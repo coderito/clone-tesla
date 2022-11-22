@@ -72,7 +72,7 @@ const ItemText = styled.div`
   }
   @media (max-width:1200px){
     a {
-      padding-bottom: 1vw;
+      padding-bottom: 1.4vw;
     }
   }
 `;
