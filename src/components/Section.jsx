@@ -72,7 +72,8 @@ const ItemText = styled.div`
   }
   @media (max-width:1200px){
     a {
-      padding-bottom: 15px;
+      width: auto;
+      height: auto;
     }
   }
 `;
