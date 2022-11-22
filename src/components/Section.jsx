@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 
 export const Section = ({
@@ -11,20 +12,23 @@ export const Section = ({
 }) => {
   return (
     <Wrap bgImage={bgImage}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>
-          <a href="">{description}</a>
-        </p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>
+            <a href="">{description}</a>
+          </p>
+        </ItemText>
+      </Fade>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>{leftBtnText}</LeftButton>
-          {rightBtnText && <RighButton>{rightBtnText}</RighButton>}
+          <Fade bottom>
+            <LeftButton>{leftBtnText}</LeftButton>
           
+          {rightBtnText && <RighButton>{rightBtnText}</RighButton>}
+          </Fade>
         </ButtonGroup>
-           {!activeDownArrow ? <DownArrow src="/img/down-arrow.svg" /> : ''}
-        
+        {!activeDownArrow ? <DownArrow src="/img/down-arrow.svg" /> : ""}
       </Buttons>
     </Wrap>
   );
@@ -36,13 +40,13 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: ${props => `url("/img/${props.bgImage}")`}
-`
+  background-image: ${(props) => `url("/img/${props.bgImage}")`};
+`;
 
 const ItemText = styled.div`
   padding-top: 17vh;
