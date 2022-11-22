@@ -32,7 +32,7 @@ export const Header = () => {
           <li onClick={() => setBurger(true)}>Menu</li>
         </ol>
       </Navigate>
-      <CustomMenu onClick={() => setBurger(true)} >Menu</CustomMenu>
+      <CustomMenu onClick={() => setBurger(true)}>Menu</CustomMenu>
       <BurgerNav show={burger}>
         <CloseWrapper onClick={() => setBurger(!burger)}>
           <CustomIconClose />
@@ -115,7 +115,8 @@ const CustomMenu = styled.li`
   border-radius: 4px;
   @media (min-width: 1200px) {
     display: none;
-  }
+    place-items: center;
+}
 `;
 
 const BurgerNav = styled.div`
