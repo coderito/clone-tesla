@@ -118,7 +118,9 @@ const CustomMenu = styled.li`
   display: flex;
   
   p{
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media (min-width: 1200px) {
     display: none;
