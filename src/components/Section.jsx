@@ -63,10 +63,17 @@ const ItemText = styled.div`
     font-weight: 300;
     margin-top: 15px;
   }
+
   a {
     text-decoration: none;
     box-shadow: rgba(23, 26, 32) 0px 1px 0px 0px;
     letter-spacing: 0.1px;
+
+  }
+  @media (max-width:1200px){
+    a {
+      padding-bottom: 18px;
+    }
   }
 `;
 
