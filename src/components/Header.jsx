@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
+import { selectCars } from "../features/carSlice";
+import { useSelector } from "react-redux";
 
 
 export const Header = () => {
   const [burger, setBurger] = useState(false)
+  const cars = useSelector(selectCars)
 
   return (
     <Container>
@@ -14,13 +17,12 @@ export const Header = () => {
         </a>
       </Logo>
       <Models>
+        
         <ol>
-          <li>Model S</li>
-          <li>Model 3</li>
-          <li>Model X</li>
-          <li>Model Y</li>
-          <li>Solar Roof</li>
-          <li>Solar Panels</li>
+          {cars && cars.map((car, index) => (
+            <li key={index}>{car}</li>
+          ))}
+          
         </ol>
       </Models>
       <Navigate>
