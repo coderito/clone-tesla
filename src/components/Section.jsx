@@ -7,7 +7,7 @@ export const Section = ({
   title,
   description = "Schedule a Test Drive",
   leftBtnText = "Custom Order",
-  rightBtnText = "Existin Inventory",
+  rightBtnText = "Existing Inventory",
   activeDownArrow = false,
 }) => {
   return (
@@ -23,7 +23,9 @@ export const Section = ({
       <Buttons>
         <ButtonGroup>
           <Fade bottom>
-            <LeftButton>{leftBtnText}</LeftButton>
+            <LeftButton>
+              {leftBtnText}
+            </LeftButton>
           
           {rightBtnText && <RighButton>{rightBtnText}</RighButton>}
           </Fade>
@@ -70,7 +72,7 @@ const ItemText = styled.div`
     letter-spacing: 0.1px;
 
   }
-  @media (max-width:1200px){
+  @media (max-width:640px){
     a {
       padding-bottom: 1.4vw;
     }
@@ -94,6 +96,7 @@ const LeftButton = styled.div`
   align-items: center;
   border-radius: 5px;
   color: white;
+  font-weight: 300;
   cursor: pointer;
   font-size: 14px;
   @media (max-width: 768px) {
